@@ -10,4 +10,4 @@ node_modules
 distrib
 
 # ignore local tool settings
-tools/settings.json
+/tools/settings.json
