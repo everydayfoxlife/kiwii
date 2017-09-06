@@ -1,6 +1,13 @@
+var viewManager = require('./viewManager');
 
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-// Update is called once per frame
-exports.update = function () {
-	
-};
+viewManager.addView('title',          require('./view/titleView'));
+viewManager.addView('game',           require('./view/gameView'));
+
+viewManager.open('title');
+exports.update = viewManager.update;
+
+//▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+if (DEBUG) {
+	require('./debug');
+}

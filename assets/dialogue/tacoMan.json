@@ -1,0 +1,22 @@
+{
+	"default": {
+		"dialogue": ["hello.", "hi.", "how are you?", "perfect day for a taco"]
+	},
+	"quest:taco:have": {
+		"dialogue": "Oh, is it a taco... for me?", 
+		"responses": [
+			{"text": "yes, dozo", "goto": "eatTaco"},
+			{"text": "no way!", "goto": "noTaco"}
+		]
+	},
+	"eatTaco": {
+		"dialogue": "thanks  lot, itadakimaaasu",
+		"trigger": "quest:taco:end",
+		"sfx": "success"
+	},
+	"noTaco": {
+		"dialogue": "oh... ok",
+		"animation": "sad",
+		"sfx": "sad"
+	}
+}
